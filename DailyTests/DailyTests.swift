@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import MapKit
 @testable import Daily
 
 class DailyTests: XCTestCase {
@@ -18,9 +19,17 @@ class DailyTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // Test that entries can succesfully be encoded then decoded
+    func testEntryEncodingDecoding() throws {
+        let originalEntry = Entry(date: Date(timeIntervalSince1970: 1605305050),
+                                  title: "My example entry",
+                                  content: "Content",
+                                  metadata: .init(temperature: 20,
+                                                  location: CLLocationCoordinate2D(latitude: 100, longitude: 100)))
+
+        let json = try originalEntry.json()
+        let loadedEntry = try JSONDecoder.withStrategy(.compatible).decode(Entry.self, from: json)
+        XCTAssert(originalEntry == loadedEntry)
     }
 
     func testPerformanceExample() throws {

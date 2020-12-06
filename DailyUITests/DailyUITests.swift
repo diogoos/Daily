@@ -22,13 +22,42 @@ class DailyUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testTabBarsExist() throws {
+        // this makes sure that all tab bar items exist
         let app = XCUIApplication()
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(app.tabBars.buttons["tabbar-entries-button"].exists, "Entries menu bar item does not exist")
+        XCTAssert(app.tabBars.buttons["tabbar-map-button"].exists, "Map menu bar item does not exist")
+    }
+
+    // test that the correct date shows on entries when changing dates with the chevrons
+    func testDateUpdatingOnEntries() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        let df = DateFormatter()
+        df.locale = Locale.current
+        df.setLocalizedDateFormatFromTemplate("MMMMd")
+
+        // test current date
+        XCTAssert(app.staticTexts["entries-header-dateLabel"].label == df.string(from: Date()))
+
+        // test previous ten days
+        for i in 1...5 {
+            app.images["entries-header-previousEntryButton"].tap()
+
+            let expectedDate = df.string(from: Date(timeIntervalSinceNow: TimeInterval(-24*60*60*i)))
+            XCTAssert(app.staticTexts["entries-header-dateLabel"].label == expectedDate)
+        }
+
+        // make sure next ten days also update correctly
+        for i in 1...5 {
+            app.images["entries-header-nextEntryButton"].tap()
+
+            let expectedDate = df.string(from: Date(timeIntervalSinceNow: TimeInterval(-24*60*60*(5-i))))
+            XCTAssert(app.staticTexts["entries-header-dateLabel"].label == expectedDate)
+        }
     }
 
     func testLaunchPerformance() throws {
