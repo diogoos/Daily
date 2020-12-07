@@ -23,8 +23,7 @@ extension UIViewController {
 }
 
 
-// Authenticate with local authentication & cooridnate
-// views
+// Authenticate with local authentication & coordinate views
 extension AppDelegate {
     static var isLockingEnabled = false
 
