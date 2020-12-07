@@ -12,7 +12,6 @@ import Combine
 class EntryViewController<Provider: EntryProvider>: UIViewController, UITextViewDelegate {
     // MARK: - Providers and dates
     private let calendar = Calendar.autoupdatingCurrent
-    // current date and entry
     private var entryProvider = Provider()
     private var currentDate: Date { entryView.picker.date }
     private var currentEntry: Entry? {

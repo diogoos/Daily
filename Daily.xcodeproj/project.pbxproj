@@ -34,7 +34,6 @@
 		FDD866C12568085100948F1B /* CustomAreaTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */; };
 		FDD866C72568090C00948F1B /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */; };
 		FDE2FD04255F5D1D002E8F80 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2FD03255F5D1D002E8F80 /* DemoData.swift */; };
-		FDE2FD09255F5D69002E8F80 /* UIViewController-Unimplemented.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2FD08255F5D69002E8F80 /* UIViewController-Unimplemented.swift */; };
 		FDE9713F2557080A002B911A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE9713E2557080A002B911A /* MapViewController.swift */; };
 		FDEE7AB52556B97000532653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7AB42556B97000532653 /* AppDelegate.swift */; };
 		FDEE7AB92556B97000532653 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7AB82556B97000532653 /* EntryViewController.swift */; };
@@ -42,6 +41,7 @@
 		FDEE7AC12556B97300532653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEE7ABF2556B97300532653 /* LaunchScreen.storyboard */; };
 		FDEE7ACC2556B97300532653 /* DailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7ACB2556B97300532653 /* DailyTests.swift */; };
 		FDEE7AD72556B97300532653 /* DailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7AD62556B97300532653 /* DailyUITests.swift */; };
+		FDF91A70257E702E00367314 /* UIViewController+Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF91A6F257E702E00367314 /* UIViewController+Tab.swift */; };
 		FDFC0232257B866E003A52EB /* UIView+screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC0231257B866E003A52EB /* UIView+screenshot.swift */; };
 		FDFC0237257B8695003A52EB /* LockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC0236257B8695003A52EB /* LockedView.swift */; };
 		FDFC024D257B897F003A52EB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC024C257B897F003A52EB /* SettingsView.swift */; };
@@ -92,7 +92,6 @@
 		FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAreaTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		FDE2FD03255F5D1D002E8F80 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
-		FDE2FD08255F5D69002E8F80 /* UIViewController-Unimplemented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Unimplemented.swift"; sourceTree = "<group>"; };
 		FDE9713E2557080A002B911A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FDEE7AB12556B97000532653 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEE7AB42556B97000532653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		FDEE7AD22556B97300532653 /* DailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEE7AD62556B97300532653 /* DailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUITests.swift; sourceTree = "<group>"; };
 		FDEE7AD82556B97300532653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF91A6F257E702E00367314 /* UIViewController+Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tab.swift"; sourceTree = "<group>"; };
 		FDFC0231257B866E003A52EB /* UIView+screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+screenshot.swift"; sourceTree = "<group>"; };
 		FDFC0236257B8695003A52EB /* LockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedView.swift; sourceTree = "<group>"; };
 		FDFC024C257B897F003A52EB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -136,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0D1334257E6F1D005FF4EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD095B7C255E830700CDCDBB /* Entry.swift */,
+				FDAD4F3C2577A24100C8CF83 /* Daily.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FD2CE621257AE8DC00B7CB1F /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +171,7 @@
 		FD4BFE6B2579875800F0750F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD2148A8256067350005AD0D /* TabBarViewController.swift */,
 				FDEE7AB82556B97000532653 /* EntryViewController.swift */,
 			);
 			path = ViewControllers;
@@ -212,6 +222,7 @@
 		FDEE7AB32556B97000532653 /* Daily */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D1334257E6F1D005FF4EA /* Models */,
 				FDFC0230257B865C003A52EB /* Extensions */,
 				FD2CE621257AE8DC00B7CB1F /* Providers */,
 				FD2D500E257AD1A700A6811C /* Helpers */,
@@ -226,11 +237,7 @@
 				FDEE7ABD2556B97300532653 /* Assets.xcassets */,
 				FDEE7ABF2556B97300532653 /* LaunchScreen.storyboard */,
 				FDEE7AC22556B97300532653 /* Info.plist */,
-				FD095B7C255E830700CDCDBB /* Entry.swift */,
 				FDE2FD03255F5D1D002E8F80 /* DemoData.swift */,
-				FDE2FD08255F5D69002E8F80 /* UIViewController-Unimplemented.swift */,
-				FD2148A8256067350005AD0D /* TabBarViewController.swift */,
-				FDAD4F3C2577A24100C8CF83 /* Daily.xcdatamodeld */,
 			);
 			path = Daily;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 				FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */,
 				FD5DBECC2579936A00FB9D26 /* UIDatePicker+Stylize.swift */,
 				FD0D132F257E6656005FF4EA /* Calendar+Range.swift */,
+				FDF91A6F257E702E00367314 /* UIViewController+Tab.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,9 +409,9 @@
 			files = (
 				FDD866C72568090C00948F1B /* SectionHeaderCollectionReusableView.swift in Sources */,
 				FD420CA12561452D00D875A9 /* CalendarPickerViewController.swift in Sources */,
-				FDE2FD09255F5D69002E8F80 /* UIViewController-Unimplemented.swift in Sources */,
 				FD38B338257BD0D10016311E /* CLPlacemark+String.swift in Sources */,
 				FD095B7D255E830700CDCDBB /* Entry.swift in Sources */,
+				FDF91A70257E702E00367314 /* UIViewController+Tab.swift in Sources */,
 				FDD866C12568085100948F1B /* CustomAreaTapGestureRecognizer.swift in Sources */,
 				FDB3031225680A1800EED82F /* CalendarDayCollectionViewCell.swift in Sources */,
 				FD420CAA2561507500D875A9 /* SlideToTopTransition.swift in Sources */,
