@@ -18,8 +18,8 @@ protocol EntryProvider {
     func deleteAll() throws // delete all entries and reset state
 
     // automatically provided, but can be overwritten
-    func entries(where: (Entry) throws -> Bool) throws -> [Entry]
-    func entries(inDateRange: Range<Date>) throws -> [Entry]
+    func entries(where whereClause: (Entry) throws -> Bool) throws -> [Entry]
+    func entries(inDateRange dateRange: Range<Date>) throws -> [Entry]
 }
 
 extension EntryProvider {
@@ -30,11 +30,9 @@ extension EntryProvider {
     // however, this can be replaced depending on the database
     // with a more efficient function
     func entries(inDateRange dateRange: Range<Date>) throws -> [Entry] { try allEntries().entries(inDateRange: dateRange) }
-    func entries(inDateRange dateRange: ClosedRange<Date>) throws -> [Entry] { try allEntries().entries(inDateRange: dateRange) }
 }
 
 internal extension Array where Element == Entry {
-    // convenience date filtering
-    func entries(inDateRange dateRange: ClosedRange<Date>) -> [Entry] { filter { dateRange.contains($0.date) } }
+    // convenience date filtering, very slow
     func entries(inDateRange dateRange: Range<Date>) -> [Entry] { filter { dateRange.contains($0.date) } }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD095B7D255E830700CDCDBB /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD095B7C255E830700CDCDBB /* Entry.swift */; };
-		FD095B82255E8E5A00CDCDBB /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD095B81255E8E5A00CDCDBB /* JSONExtension.swift */; };
+		FD0D1330257E6656005FF4EA /* Calendar+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D132F257E6656005FF4EA /* Calendar+Range.swift */; };
 		FD2148A9256067350005AD0D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2148A8256067350005AD0D /* TabBarViewController.swift */; };
 		FD2148B125606E560005AD0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2148B025606E560005AD0D /* SceneDelegate.swift */; };
 		FD2CE623257AE8F200B7CB1F /* CoreDataEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2CE622257AE8F200B7CB1F /* CoreDataEntryProvider.swift */; };
@@ -30,7 +30,6 @@
 		FDB3031725680AB000EED82F /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3031625680AB000EED82F /* EmptyCollectionViewCell.swift */; };
 		FDB3031C25680C0500EED82F /* CalendarPickerViewCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3031B25680C0500EED82F /* CalendarPickerViewCollectionManager.swift */; };
 		FDCF04D8257C31D000FEA48D /* CLGeocoder+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */; };
-		FDCF04E0257C3F5300FEA48D /* CLLocationCoordinate2D+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF04DF257C3F5300FEA48D /* CLLocationCoordinate2D+CLLocation.swift */; };
 		FDCF04E8257D068B00FEA48D /* MetadataPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF04E7257D068B00FEA48D /* MetadataPublishers.swift */; };
 		FDD866C12568085100948F1B /* CustomAreaTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */; };
 		FDD866C72568090C00948F1B /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */; };
@@ -67,7 +66,7 @@
 
 /* Begin PBXFileReference section */
 		FD095B7C255E830700CDCDBB /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		FD095B81255E8E5A00CDCDBB /* JSONExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
+		FD0D132F257E6656005FF4EA /* Calendar+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Range.swift"; sourceTree = "<group>"; };
 		FD2148A8256067350005AD0D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FD2148B025606E560005AD0D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FD2CE622257AE8F200B7CB1F /* CoreDataEntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntryProvider.swift; sourceTree = "<group>"; };
@@ -89,7 +88,6 @@
 		FDB3031625680AB000EED82F /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDB3031B25680C0500EED82F /* CalendarPickerViewCollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerViewCollectionManager.swift; sourceTree = "<group>"; };
 		FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLGeocoder+Future.swift"; sourceTree = "<group>"; };
-		FDCF04DF257C3F5300FEA48D /* CLLocationCoordinate2D+CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+CLLocation.swift"; sourceTree = "<group>"; };
 		FDCF04E7257D068B00FEA48D /* MetadataPublishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataPublishers.swift; sourceTree = "<group>"; };
 		FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAreaTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -229,12 +227,10 @@
 				FDEE7ABF2556B97300532653 /* LaunchScreen.storyboard */,
 				FDEE7AC22556B97300532653 /* Info.plist */,
 				FD095B7C255E830700CDCDBB /* Entry.swift */,
-				FD095B81255E8E5A00CDCDBB /* JSONExtension.swift */,
 				FDE2FD03255F5D1D002E8F80 /* DemoData.swift */,
 				FDE2FD08255F5D69002E8F80 /* UIViewController-Unimplemented.swift */,
 				FD2148A8256067350005AD0D /* TabBarViewController.swift */,
 				FDAD4F3C2577A24100C8CF83 /* Daily.xcdatamodeld */,
-				FD5DBECC2579936A00FB9D26 /* UIDatePicker+Stylize.swift */,
 			);
 			path = Daily;
 			sourceTree = "<group>";
@@ -264,7 +260,8 @@
 				FD316D30256005D000872EFB /* AppDelegate+ViewLocking.swift */,
 				FD38B337257BD0D10016311E /* CLPlacemark+String.swift */,
 				FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */,
-				FDCF04DF257C3F5300FEA48D /* CLLocationCoordinate2D+CLLocation.swift */,
+				FD5DBECC2579936A00FB9D26 /* UIDatePicker+Stylize.swift */,
+				FD0D132F257E6656005FF4EA /* Calendar+Range.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,18 +410,17 @@
 				FD2D5013257AD1E000A6811C /* TextViewAutoplaceholderDelegate.swift in Sources */,
 				FDB3031C25680C0500EED82F /* CalendarPickerViewCollectionManager.swift in Sources */,
 				FD2148A9256067350005AD0D /* TabBarViewController.swift in Sources */,
+				FD0D1330257E6656005FF4EA /* Calendar+Range.swift in Sources */,
 				FDAD4F3E2577A24100C8CF83 /* Daily.xcdatamodeld in Sources */,
 				FD5DBECD2579936A00FB9D26 /* UIDatePicker+Stylize.swift in Sources */,
 				FDA3389D2577BB2F00C2A21C /* CoreDataManager.swift in Sources */,
 				FD2CE623257AE8F200B7CB1F /* CoreDataEntryProvider.swift in Sources */,
 				FD84AA912571422E00C046E4 /* MockEntryProvider.swift in Sources */,
 				FDFC024D257B897F003A52EB /* SettingsView.swift in Sources */,
-				FD095B82255E8E5A00CDCDBB /* JSONExtension.swift in Sources */,
 				FDFC0232257B866E003A52EB /* UIView+screenshot.swift in Sources */,
 				FDCF04E8257D068B00FEA48D /* MetadataPublishers.swift in Sources */,
 				FDE2FD04255F5D1D002E8F80 /* DemoData.swift in Sources */,
 				FD2D501B257AD21900A6811C /* TextFieldReturnNextResponderDelegate.swift in Sources */,
-				FDCF04E0257C3F5300FEA48D /* CLLocationCoordinate2D+CLLocation.swift in Sources */,
 				FDEE7AB92556B97000532653 /* EntryViewController.swift in Sources */,
 				FDEE7AB52556B97000532653 /* AppDelegate.swift in Sources */,
 				FDCF04D8257C31D000FEA48D /* CLGeocoder+Future.swift in Sources */,

@@ -18,9 +18,8 @@ class EntryViewController<Provider: EntryProvider>: UIViewController, UITextView
     private var currentDate: Date { entryView.picker.date }
     private var currentEntry: Entry? {
         do {
-            let loadedEntry = try entryProvider.entries(where: { entry in
-                calendar.isDate(entry.date, inSameDayAs: currentDate)
-            }).first
+            let range = calendar.range(of: .day, in: currentDate)
+            let loadedEntry = try entryProvider.entries(inDateRange: range).first
 
             if loadedEntry == nil && calendar.isDateInToday(currentDate) {
                 return Entry(date: currentDate, title: "", content: "", metadata: Entry.Metadata(location: nil, temperature: nil))
@@ -208,7 +207,7 @@ class EntryViewController<Provider: EntryProvider>: UIViewController, UITextView
                 }
 
 
-                geocoder.reverseGeocodeLocationPublisher(location.location())
+                geocoder.reverseGeocodeLocationPublisher(CLLocation(latitude: location.latitude, longitude: location.longitude))
                     .map(\.formattedString)
                     .sink(receiveCompletion: { _ in },
                           receiveValue: { placemark in
@@ -226,3 +225,4 @@ class EntryViewController<Provider: EntryProvider>: UIViewController, UITextView
         refreshView()
     }
 }
+

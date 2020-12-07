@@ -83,6 +83,20 @@ class CoreDataEntryProvider: EntryProvider {
 
         if context.hasChanges { try context.save() }
     }
+
+    func entries(inDateRange dateRange: Range<Date>) throws -> [Entry] {
+        let dateFrom = dateRange.lowerBound as NSDate
+        let dateTo = dateRange.upperBound as NSDate
+
+        let fromPredicate = NSPredicate(format: "%K >= %@", #keyPath(CoreEntry.date), dateFrom)
+        let toPredicate = NSPredicate(format: "%K < %@", #keyPath(CoreEntry.date), dateTo)
+        let datePredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, toPredicate])
+
+        let fetchRequest = NSFetchRequest<CoreEntry>(entityName: "CoreEntry")
+        fetchRequest.predicate = datePredicate
+
+        return try context.fetch(fetchRequest).compactMap({ Entry(from: $0) })
+    }
 }
 
 extension CoreDataEntryProvider.CoreDataProviderErrors: LocalizedError {
