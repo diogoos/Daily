@@ -12,20 +12,12 @@ import Combine
 class EntryViewController<Provider: EntryProvider>: UIViewController, UITextViewDelegate {
     // MARK: - Providers and dates
     private let calendar = Calendar.autoupdatingCurrent
-
     // current date and entry
     private var entryProvider = Provider()
     private var currentDate: Date { entryView.picker.date }
     private var currentEntry: Entry? {
         do {
-            let range = calendar.range(of: .day, in: currentDate)
-            let loadedEntry = try entryProvider.entries(inDateRange: range).first
-
-            if loadedEntry == nil && calendar.isDateInToday(currentDate) {
-                return Entry(date: currentDate, title: "", content: "", metadata: Entry.Metadata(location: nil, temperature: nil))
-            }
-
-            return loadedEntry
+            return try entryProvider.entry(date: currentDate)
         } catch {
             handleError(error)
             return nil
@@ -44,7 +36,7 @@ class EntryViewController<Provider: EntryProvider>: UIViewController, UITextView
             .sink(receiveCompletion: { _ in },
                   receiveValue: { location in
                     DispatchQueue.main.async {
-                        let metadata = self.currentEntry?.metadata ?? Entry.Metadata(location: nil, temperature: nil)
+                        let metadata = self.currentEntry?.metadata ?? .empty
                         metadata.location = location
                         self.saveContext(metadata: metadata)
                     }
@@ -58,7 +50,7 @@ class EntryViewController<Provider: EntryProvider>: UIViewController, UITextView
                   receiveValue: { temperature in
                     DispatchQueue.main.async {
                         // save to entry
-                        let metadata = self.currentEntry?.metadata ?? Entry.Metadata(location: nil, temperature: nil)
+                        let metadata = self.currentEntry?.metadata ?? .empty
                         metadata.temperature = temperature
                         self.saveContext(metadata: metadata)
 

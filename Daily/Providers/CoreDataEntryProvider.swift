@@ -26,11 +26,7 @@ class CoreDataEntryProvider: EntryProvider {
     }
 
     enum CoreDataProviderErrors: Error {
-        case noAssociatedManagedObject
-        case notImplemented
-        case failedToLoadFromID
-        case failedToParseEntry
-        case entityNotFound
+        case noAssociatedManagedObject, notImplemented, failedToLoadFromID, failedToParseEntry, entityNotFound, couldNotConvertDateIntoRange
     }
 
     func delete(_ entry: Entry) throws {
@@ -97,6 +93,19 @@ class CoreDataEntryProvider: EntryProvider {
 
         return try context.fetch(fetchRequest).compactMap({ Entry(from: $0) })
     }
+
+    func entry(date: Date) throws -> Entry? {
+        let calendar = Calendar.current
+
+        guard let range = calendar.range(of: .day, in: date) else { throw CoreDataProviderErrors.couldNotConvertDateIntoRange }
+        let loadedEntry = try entries(inDateRange: range).first
+
+        if loadedEntry == nil && calendar.isDateInToday(date) {
+            return Entry(date: date, title: "", content: "", metadata: .empty)
+        }
+
+        return loadedEntry
+    }
 }
 
 extension CoreDataEntryProvider.CoreDataProviderErrors: LocalizedError {
@@ -112,6 +121,8 @@ extension CoreDataEntryProvider.CoreDataProviderErrors: LocalizedError {
             return "A managed object identifier from CoreEntrty is _required_, but was not found in the Entry."
         case .notImplemented:
             return "The method called is not yet implemented, and likely should not have been called."
+        case .couldNotConvertDateIntoRange:
+            return "Could not convert Date into Range<Date> necessary for fetching with NSPredicate."
         }
     }
 }

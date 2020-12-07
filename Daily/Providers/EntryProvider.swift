@@ -20,6 +20,10 @@ protocol EntryProvider {
     // automatically provided, but can be overwritten
     func entries(where whereClause: (Entry) throws -> Bool) throws -> [Entry]
     func entries(inDateRange dateRange: Range<Date>) throws -> [Entry]
+
+    /// Get entry for given date
+    /// - Note: When given the current date, never return nil. Instead, return an empty Entry with the correct Date.
+    func entry(date: Date) throws -> Entry?
 }
 
 extension EntryProvider {
@@ -30,6 +34,23 @@ extension EntryProvider {
     // however, this can be replaced depending on the database
     // with a more efficient function
     func entries(inDateRange dateRange: Range<Date>) throws -> [Entry] { try allEntries().entries(inDateRange: dateRange) }
+
+    // By default, just filter through all the entires
+    // and return those in the same day. should be replaced with
+    // more efficient methods whenever possible (ex NSPredicate)
+    func entry(date: Date) throws -> Entry? {
+        let calendar = Calendar.current
+
+        let result = try allEntries().filter({
+            calendar.isDate(date, inSameDayAs: $0.date)
+        }).first
+
+        if result == nil && calendar.isDateInToday(date) {
+            return Entry(date: date, title: "", content: "", metadata: .empty)
+        }
+
+        return result
+    }
 }
 
 internal extension Array where Element == Entry {

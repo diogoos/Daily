@@ -33,6 +33,8 @@ class Entry: Equatable, Encodable {
             self.location = location
             self.temperature = temperature
         }
+
+        static let empty = Metadata(location: nil, temperature: nil)
     }
 
     init( date: Date, title: String, content: String, metadata: Entry.Metadata) {

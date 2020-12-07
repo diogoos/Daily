@@ -8,16 +8,14 @@
 import Foundation
 
 extension Calendar {
-    func range(of period: Calendar.Component, in baseDate: Date) -> Range<Date> {
-        var startDate: NSDate? = nil
-        (self as NSCalendar).range(of: .day, start: &startDate, interval: nil, for: baseDate)
-        let endDate = date(byAdding: period, value: 1, to: startDate! as Date)
+    func range(of period: Calendar.Component, in baseDate: Date) -> Range<Date>? {
+        var cStartDate: NSDate? = nil
+        (self as NSCalendar).range(of: .day, start: &cStartDate, interval: nil, for: baseDate)
 
-        guard startDate != nil, endDate != nil else {
-            return baseDate..<(date(byAdding: period, value: 1, to: baseDate) ?? baseDate) // should never occur
-        }
+        guard let startDate = cStartDate as Date? else { return nil }
+        guard let endDate = date(byAdding: period, value: 1, to: startDate as Date) else { return nil }
 
-        return (startDate! as Date)..<endDate!
+        return startDate..<endDate
     }
 }
 
