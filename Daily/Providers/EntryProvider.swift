@@ -51,6 +51,25 @@ extension EntryProvider {
 
         return result
     }
+
+    func export() -> URL? {
+        // load all entries
+        guard let entries = try? allEntries() else { return nil }
+
+        // encode them to json
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        encoder.dateEncodingStrategy = .iso8601
+        guard let json = try? encoder.encode(entries) else { return nil }
+
+        // save to a file
+        guard let caches = try? FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true) else { return nil }
+        let url = caches.appendingPathComponent("daily-export-\(Int(Date().timeIntervalSince1970)).json")
+        try? json.write(to: url)
+
+        // return file location
+        return url
+    }
 }
 
 internal extension Array where Element == Entry {

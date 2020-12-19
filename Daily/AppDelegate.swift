@@ -12,12 +12,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        // enable biometric app locking via flag
-        if CommandLine.arguments.contains("--enable-biometric-locking") {
-            Self.isLockingEnabled = true
-        }
-
-        resetToday: if CommandLine.arguments.contains("--reset-today-entry") {
+        // reset the current entry via flag
+        resetToday: if env("--reset-today-entry") {
             let provider = CoreDataEntryProvider()
             let calendar = Calendar.current
             guard let todayEntries = try? provider.entries(where: {
@@ -28,24 +24,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             todayEntries.forEach({
                 try? provider.delete($0)
             })
+        }
 
+        // reset user preferences via flag
+        if env("--reset-user-preferences") {
+            let defaults = UserDefaults.standard
+            defaults.removeObject(forKey: "requiresLocalAuthenticationToUnlock")
+            defaults.removeObject(forKey: "selectedColorScheme")
+            defaults.removeObject(forKey: "locationAssociationDisabled")
         }
 
         // remove exports temp saved in documents
         DispatchQueue.global(qos: .background).async {
             let fileManager = FileManager()
-            guard let documentFolder = try? fileManager.url(for: .documentDirectory,
+            guard let documentFolder = try? fileManager.url(for: .cachesDirectory,
                                                             in: .userDomainMask,
                                                             appropriateFor: nil,
                                                             create: true) else { return }
 
-            guard let documents = try? fileManager.contentsOfDirectory(at: documentFolder,
-                                                                       includingPropertiesForKeys: nil) else { return }
+            guard let caches = try? fileManager.contentsOfDirectory(at: documentFolder,
+                                                                    includingPropertiesForKeys: nil) else { return }
 
             // find only temporary exports (json & has "daily-export-")
-            let exports = documents.filter { return $0.pathExtension == "json" && $0.path.contains("daily-export-") }
+            let exports = caches.filter { return $0.pathExtension == "json" && $0.path.contains("daily-export-") }
             exports.forEach { try? fileManager.removeItem(at: $0) }
         }
+
 
         return true
     }

@@ -9,6 +9,12 @@ import MapKit
 import Combine
 
 final class LocationManager: NSObject {
+    // MARK: - Enable/Disable properties
+    static var isLocationEnabled: Bool = {
+        if env("always-enable-location") { return true }
+        return !UserDefaults.standard.bool(forKey: "locationAssociationDisabled") // location not disabled
+    }()
+
     // MARK: - Public properties
 
     /// Publisher reporting the latitude, longitude, and course information reported by the system.
@@ -60,6 +66,7 @@ final class LocationManager: NSObject {
 
     // MARK: - Managing monitoring
     func startMonitoring() {
+        guard Self.isLocationEnabled else { return }
         guard !isMonitoring else { return }
         isMonitoring = true
 
@@ -70,6 +77,7 @@ final class LocationManager: NSObject {
     }
 
     func stopMonitoring() {
+        guard Self.isLocationEnabled else { return }
         guard isMonitoring else { return }
         isMonitoring = false
 

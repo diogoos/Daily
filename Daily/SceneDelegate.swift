@@ -19,8 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TabBarViewController()
-        window?.rootViewController?.lockView() // make sure the app starts with the locked window
+
+        let tabBarVC = TabBarViewController()
+        LockingDelegate.lock(view: tabBarVC.view) // make sure the app starts with a locked view
+        window?.rootViewController = tabBarVC
+
         window?.makeKeyAndVisible()
     }
 
@@ -44,7 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        (UIApplication.shared.delegate as! AppDelegate).authenticate()
+        LockingDelegate.authenticate()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -52,7 +55,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
         CoreDataManager.shared.saveContext()
-        UIApplication.shared.keyController?.lockView()
+        LockingDelegate.lockCurrent()
     }
 
 

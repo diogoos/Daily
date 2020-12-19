@@ -9,10 +9,10 @@ import UIKit
 import CoreData
 import Combine
 
-class EntryViewController<Provider: EntryProvider>: UIViewController, UITextViewDelegate {
+class EntryViewController: UIViewController, UITextViewDelegate {
     // MARK: - Providers and dates
     private let calendar = Calendar.autoupdatingCurrent
-    private var entryProvider = Provider()
+    private var entryProvider: EntryProvider
     private var currentDate: Date { entryView.picker.date }
     private var currentEntry: Entry? {
         do {
@@ -21,6 +21,16 @@ class EntryViewController<Provider: EntryProvider>: UIViewController, UITextView
             handleError(error)
             return nil
         }
+    }
+
+    // Init
+    init(provider: EntryProvider) {
+        self.entryProvider = provider
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Publishers and Subscripbers

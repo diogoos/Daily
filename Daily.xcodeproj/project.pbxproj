@@ -15,25 +15,23 @@
 		FD2D5013257AD1E000A6811C /* TextViewAutoplaceholderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D5012257AD1E000A6811C /* TextViewAutoplaceholderDelegate.swift */; };
 		FD2D501B257AD21900A6811C /* TextFieldReturnNextResponderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D501A257AD21900A6811C /* TextFieldReturnNextResponderDelegate.swift */; };
 		FD316D2C255FF2CA00872EFB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD316D2B255FF2CA00872EFB /* LocationManager.swift */; };
-		FD316D31256005D000872EFB /* AppDelegate+ViewLocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD316D30256005D000872EFB /* AppDelegate+ViewLocking.swift */; };
+		FD316D31256005D000872EFB /* LockingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD316D30256005D000872EFB /* LockingDelegate.swift */; };
+		FD36F43D257E74CB00123FFB /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36F43C257E74CB00123FFB /* LicenseView.swift */; };
+		FD36F442257E89A100123FFB /* SelectableListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36F441257E89A100123FFB /* SelectableListItemView.swift */; };
+		FD36F44A257EC5B300123FFB /* env.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36F449257EC5B300123FFB /* env.swift */; };
 		FD38B338257BD0D10016311E /* CLPlacemark+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38B337257BD0D10016311E /* CLPlacemark+String.swift */; };
 		FD38B33D257BE87F0016311E /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38B33C257BE87F0016311E /* WeatherAPI.swift */; };
-		FD420CA12561452D00D875A9 /* CalendarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD420C9F2561452D00D875A9 /* CalendarPickerViewController.swift */; };
-		FD420CAA2561507500D875A9 /* SlideToTopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD420CA92561507500D875A9 /* SlideToTopTransition.swift */; };
+		FD44A5C3258E0C84004E3B2B /* UIApplication+keyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44A5C2258E0C84004E3B2B /* UIApplication+keyController.swift */; };
+		FD44A5C8258E113C004E3B2B /* AuthRetryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44A5C7258E113C004E3B2B /* AuthRetryButton.swift */; };
+		FD44A5D6258E1517004E3B2B /* BoolBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44A5D5258E1517004E3B2B /* BoolBinding.swift */; };
 		FD5DBECD2579936A00FB9D26 /* UIDatePicker+Stylize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5DBECC2579936A00FB9D26 /* UIDatePicker+Stylize.swift */; };
 		FD5DBED3257999E700FB9D26 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5DBED2257999E700FB9D26 /* EntryView.swift */; };
 		FD84AA8C25713EF100C046E4 /* EntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84AA8B25713EF100C046E4 /* EntryProvider.swift */; };
 		FD84AA912571422E00C046E4 /* MockEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84AA902571422E00C046E4 /* MockEntryProvider.swift */; };
 		FDA3389D2577BB2F00C2A21C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA3389C2577BB2F00C2A21C /* CoreDataManager.swift */; };
 		FDAD4F3E2577A24100C8CF83 /* Daily.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDAD4F3C2577A24100C8CF83 /* Daily.xcdatamodeld */; };
-		FDB3031225680A1800EED82F /* CalendarDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3031125680A1800EED82F /* CalendarDayCollectionViewCell.swift */; };
-		FDB3031725680AB000EED82F /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3031625680AB000EED82F /* EmptyCollectionViewCell.swift */; };
-		FDB3031C25680C0500EED82F /* CalendarPickerViewCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3031B25680C0500EED82F /* CalendarPickerViewCollectionManager.swift */; };
 		FDCF04D8257C31D000FEA48D /* CLGeocoder+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */; };
 		FDCF04E8257D068B00FEA48D /* MetadataPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF04E7257D068B00FEA48D /* MetadataPublishers.swift */; };
-		FDD866C12568085100948F1B /* CustomAreaTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */; };
-		FDD866C72568090C00948F1B /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */; };
-		FDE2FD04255F5D1D002E8F80 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2FD03255F5D1D002E8F80 /* DemoData.swift */; };
 		FDE9713F2557080A002B911A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE9713E2557080A002B911A /* MapViewController.swift */; };
 		FDEE7AB52556B97000532653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7AB42556B97000532653 /* AppDelegate.swift */; };
 		FDEE7AB92556B97000532653 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7AB82556B97000532653 /* EntryViewController.swift */; };
@@ -42,9 +40,15 @@
 		FDEE7ACC2556B97300532653 /* DailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7ACB2556B97300532653 /* DailyTests.swift */; };
 		FDEE7AD72556B97300532653 /* DailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE7AD62556B97300532653 /* DailyUITests.swift */; };
 		FDF91A70257E702E00367314 /* UIViewController+Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF91A6F257E702E00367314 /* UIViewController+Tab.swift */; };
+		FDF91A7D257E734200367314 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FDF91A7C257E734200367314 /* LICENSE */; };
+		FDF91A83257E740E00367314 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF91A82257E740E00367314 /* TextView.swift */; };
 		FDFC0232257B866E003A52EB /* UIView+screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC0231257B866E003A52EB /* UIView+screenshot.swift */; };
-		FDFC0237257B8695003A52EB /* LockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC0236257B8695003A52EB /* LockedView.swift */; };
 		FDFC024D257B897F003A52EB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFC024C257B897F003A52EB /* SettingsView.swift */; };
+		FDFEA1A5258E5E7500EF3EA1 /* CLLocationCoordinate2D+distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA1A4258E5E7500EF3EA1 /* CLLocationCoordinate2D+distance.swift */; };
+		FDFEA1AA258E5E9600EF3EA1 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA1A9258E5E9600EF3EA1 /* SubtitleTableViewCell.swift */; };
+		FDFEA1AF258E5EAC00EF3EA1 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA1AE258E5EAC00EF3EA1 /* ClusterAnnotationView.swift */; };
+		FDFEA1B4258E5EC200EF3EA1 /* AutoclusteringAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA1B3258E5EC200EF3EA1 /* AutoclusteringAnnotationView.swift */; };
+		FDFEA1B9258E5ED900EF3EA1 /* EntryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA1B8258E5ED900EF3EA1 /* EntryAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,25 +77,23 @@
 		FD2D5012257AD1E000A6811C /* TextViewAutoplaceholderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewAutoplaceholderDelegate.swift; sourceTree = "<group>"; };
 		FD2D501A257AD21900A6811C /* TextFieldReturnNextResponderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldReturnNextResponderDelegate.swift; sourceTree = "<group>"; };
 		FD316D2B255FF2CA00872EFB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		FD316D30256005D000872EFB /* AppDelegate+ViewLocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ViewLocking.swift"; sourceTree = "<group>"; };
+		FD316D30256005D000872EFB /* LockingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingDelegate.swift; sourceTree = "<group>"; };
+		FD36F43C257E74CB00123FFB /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
+		FD36F441257E89A100123FFB /* SelectableListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableListItemView.swift; sourceTree = "<group>"; };
+		FD36F449257EC5B300123FFB /* env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = env.swift; sourceTree = "<group>"; };
 		FD38B337257BD0D10016311E /* CLPlacemark+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+String.swift"; sourceTree = "<group>"; };
 		FD38B33C257BE87F0016311E /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
-		FD420C9F2561452D00D875A9 /* CalendarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerViewController.swift; sourceTree = "<group>"; };
-		FD420CA92561507500D875A9 /* SlideToTopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToTopTransition.swift; sourceTree = "<group>"; };
+		FD44A5C2258E0C84004E3B2B /* UIApplication+keyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+keyController.swift"; sourceTree = "<group>"; };
+		FD44A5C7258E113C004E3B2B /* AuthRetryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRetryButton.swift; sourceTree = "<group>"; };
+		FD44A5D5258E1517004E3B2B /* BoolBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolBinding.swift; sourceTree = "<group>"; };
 		FD5DBECC2579936A00FB9D26 /* UIDatePicker+Stylize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+Stylize.swift"; sourceTree = "<group>"; };
 		FD5DBED2257999E700FB9D26 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		FD84AA8B25713EF100C046E4 /* EntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryProvider.swift; sourceTree = "<group>"; };
 		FD84AA902571422E00C046E4 /* MockEntryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEntryProvider.swift; sourceTree = "<group>"; };
 		FDA3389C2577BB2F00C2A21C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FDAD4F3D2577A24100C8CF83 /* Entry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entry.xcdatamodel; sourceTree = "<group>"; };
-		FDB3031125680A1800EED82F /* CalendarDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayCollectionViewCell.swift; sourceTree = "<group>"; };
-		FDB3031625680AB000EED82F /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
-		FDB3031B25680C0500EED82F /* CalendarPickerViewCollectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPickerViewCollectionManager.swift; sourceTree = "<group>"; };
 		FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLGeocoder+Future.swift"; sourceTree = "<group>"; };
 		FDCF04E7257D068B00FEA48D /* MetadataPublishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataPublishers.swift; sourceTree = "<group>"; };
-		FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAreaTapGestureRecognizer.swift; sourceTree = "<group>"; };
-		FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		FDE2FD03255F5D1D002E8F80 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		FDE9713E2557080A002B911A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FDEE7AB12556B97000532653 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEE7AB42556B97000532653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +108,15 @@
 		FDEE7AD62556B97300532653 /* DailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUITests.swift; sourceTree = "<group>"; };
 		FDEE7AD82556B97300532653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF91A6F257E702E00367314 /* UIViewController+Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Tab.swift"; sourceTree = "<group>"; };
+		FDF91A7C257E734200367314 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FDF91A82257E740E00367314 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		FDFC0231257B866E003A52EB /* UIView+screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+screenshot.swift"; sourceTree = "<group>"; };
-		FDFC0236257B8695003A52EB /* LockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedView.swift; sourceTree = "<group>"; };
 		FDFC024C257B897F003A52EB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FDFEA1A4258E5E7500EF3EA1 /* CLLocationCoordinate2D+distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+distance.swift"; sourceTree = "<group>"; };
+		FDFEA1A9258E5E9600EF3EA1 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		FDFEA1AE258E5EAC00EF3EA1 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
+		FDFEA1B3258E5EC200EF3EA1 /* AutoclusteringAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoclusteringAnnotationView.swift; sourceTree = "<group>"; };
+		FDFEA1B8258E5ED900EF3EA1 /* EntryAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,37 +179,37 @@
 		FD4BFE6B2579875800F0750F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDE9713E2557080A002B911A /* MapViewController.swift */,
 				FD2148A8256067350005AD0D /* TabBarViewController.swift */,
 				FDEE7AB82556B97000532653 /* EntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		FD533A03257ECD1100666455 /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				FD36F449257EC5B300123FFB /* env.swift */,
+				FD44A5C2258E0C84004E3B2B /* UIApplication+keyController.swift */,
+			);
+			path = Convenience;
+			sourceTree = "<group>";
+		};
 		FD5DBED1257999DC00FB9D26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDF91A81257E73F700367314 /* Components */,
 				FD5DBED2257999E700FB9D26 /* EntryView.swift */,
-				FDFC0236257B8695003A52EB /* LockedView.swift */,
 				FDFC024C257B897F003A52EB /* SettingsView.swift */,
+				FD44A5C7258E113C004E3B2B /* AuthRetryButton.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FDD866C5256808E400948F1B /* CalendarPicker */ = {
-			isa = PBXGroup;
-			children = (
-				FD420C9F2561452D00D875A9 /* CalendarPickerViewController.swift */,
-				FDD866C62568090C00948F1B /* SectionHeaderCollectionReusableView.swift */,
-				FDB3031125680A1800EED82F /* CalendarDayCollectionViewCell.swift */,
-				FDB3031625680AB000EED82F /* EmptyCollectionViewCell.swift */,
-				FDB3031B25680C0500EED82F /* CalendarPickerViewCollectionManager.swift */,
-			);
-			path = CalendarPicker;
 			sourceTree = "<group>";
 		};
 		FDEE7AA82556B97000532653 = {
 			isa = PBXGroup;
 			children = (
+				FDF91A7C257E734200367314 /* LICENSE */,
 				FDEE7AB32556B97000532653 /* Daily */,
 				FDEE7ACA2556B97300532653 /* DailyTests */,
 				FDEE7AD52556B97300532653 /* DailyUITests */,
@@ -222,22 +230,19 @@
 		FDEE7AB32556B97000532653 /* Daily */ = {
 			isa = PBXGroup;
 			children = (
+				FD533A03257ECD1100666455 /* Convenience */,
 				FD0D1334257E6F1D005FF4EA /* Models */,
 				FDFC0230257B865C003A52EB /* Extensions */,
 				FD2CE621257AE8DC00B7CB1F /* Providers */,
 				FD2D500E257AD1A700A6811C /* Helpers */,
 				FD5DBED1257999DC00FB9D26 /* Views */,
 				FD4BFE6B2579875800F0750F /* ViewControllers */,
-				FDD866C02568085100948F1B /* CustomAreaTapGestureRecognizer.swift */,
-				FD420CA92561507500D875A9 /* SlideToTopTransition.swift */,
-				FDD866C5256808E400948F1B /* CalendarPicker */,
 				FDEE7AB42556B97000532653 /* AppDelegate.swift */,
+				FD316D30256005D000872EFB /* LockingDelegate.swift */,
 				FD2148B025606E560005AD0D /* SceneDelegate.swift */,
-				FDE9713E2557080A002B911A /* MapViewController.swift */,
 				FDEE7ABD2556B97300532653 /* Assets.xcassets */,
 				FDEE7ABF2556B97300532653 /* LaunchScreen.storyboard */,
 				FDEE7AC22556B97300532653 /* Info.plist */,
-				FDE2FD03255F5D1D002E8F80 /* DemoData.swift */,
 			);
 			path = Daily;
 			sourceTree = "<group>";
@@ -260,16 +265,31 @@
 			path = DailyUITests;
 			sourceTree = "<group>";
 		};
+		FDF91A81257E73F700367314 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FDF91A82257E740E00367314 /* TextView.swift */,
+				FD36F43C257E74CB00123FFB /* LicenseView.swift */,
+				FD36F441257E89A100123FFB /* SelectableListItemView.swift */,
+				FDFEA1A9258E5E9600EF3EA1 /* SubtitleTableViewCell.swift */,
+				FDFEA1AE258E5EAC00EF3EA1 /* ClusterAnnotationView.swift */,
+				FDFEA1B3258E5EC200EF3EA1 /* AutoclusteringAnnotationView.swift */,
+				FDFEA1B8258E5ED900EF3EA1 /* EntryAnnotation.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FDFC0230257B865C003A52EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FDFC0231257B866E003A52EB /* UIView+screenshot.swift */,
-				FD316D30256005D000872EFB /* AppDelegate+ViewLocking.swift */,
 				FD38B337257BD0D10016311E /* CLPlacemark+String.swift */,
 				FDCF04D7257C31D000FEA48D /* CLGeocoder+Future.swift */,
 				FD5DBECC2579936A00FB9D26 /* UIDatePicker+Stylize.swift */,
 				FD0D132F257E6656005FF4EA /* Calendar+Range.swift */,
 				FDF91A6F257E702E00367314 /* UIViewController+Tab.swift */,
+				FD44A5D5258E1517004E3B2B /* BoolBinding.swift */,
+				FDFEA1A4258E5E7500EF3EA1 /* CLLocationCoordinate2D+distance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF91A7D257E734200367314 /* LICENSE in Resources */,
 				FDEE7AC12556B97300532653 /* LaunchScreen.storyboard in Resources */,
 				FDEE7ABE2556B97300532653 /* Assets.xcassets in Resources */,
 			);
@@ -407,36 +428,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD866C72568090C00948F1B /* SectionHeaderCollectionReusableView.swift in Sources */,
-				FD420CA12561452D00D875A9 /* CalendarPickerViewController.swift in Sources */,
+				FD44A5C3258E0C84004E3B2B /* UIApplication+keyController.swift in Sources */,
 				FD38B338257BD0D10016311E /* CLPlacemark+String.swift in Sources */,
 				FD095B7D255E830700CDCDBB /* Entry.swift in Sources */,
 				FDF91A70257E702E00367314 /* UIViewController+Tab.swift in Sources */,
-				FDD866C12568085100948F1B /* CustomAreaTapGestureRecognizer.swift in Sources */,
-				FDB3031225680A1800EED82F /* CalendarDayCollectionViewCell.swift in Sources */,
-				FD420CAA2561507500D875A9 /* SlideToTopTransition.swift in Sources */,
 				FD2D5013257AD1E000A6811C /* TextViewAutoplaceholderDelegate.swift in Sources */,
-				FDB3031C25680C0500EED82F /* CalendarPickerViewCollectionManager.swift in Sources */,
+				FDFEA1B9258E5ED900EF3EA1 /* EntryAnnotation.swift in Sources */,
 				FD2148A9256067350005AD0D /* TabBarViewController.swift in Sources */,
 				FD0D1330257E6656005FF4EA /* Calendar+Range.swift in Sources */,
 				FDAD4F3E2577A24100C8CF83 /* Daily.xcdatamodeld in Sources */,
+				FD36F442257E89A100123FFB /* SelectableListItemView.swift in Sources */,
+				FDFEA1A5258E5E7500EF3EA1 /* CLLocationCoordinate2D+distance.swift in Sources */,
 				FD5DBECD2579936A00FB9D26 /* UIDatePicker+Stylize.swift in Sources */,
 				FDA3389D2577BB2F00C2A21C /* CoreDataManager.swift in Sources */,
+				FDFEA1AF258E5EAC00EF3EA1 /* ClusterAnnotationView.swift in Sources */,
 				FD2CE623257AE8F200B7CB1F /* CoreDataEntryProvider.swift in Sources */,
+				FDFEA1AA258E5E9600EF3EA1 /* SubtitleTableViewCell.swift in Sources */,
+				FD44A5D6258E1517004E3B2B /* BoolBinding.swift in Sources */,
 				FD84AA912571422E00C046E4 /* MockEntryProvider.swift in Sources */,
 				FDFC024D257B897F003A52EB /* SettingsView.swift in Sources */,
 				FDFC0232257B866E003A52EB /* UIView+screenshot.swift in Sources */,
 				FDCF04E8257D068B00FEA48D /* MetadataPublishers.swift in Sources */,
-				FDE2FD04255F5D1D002E8F80 /* DemoData.swift in Sources */,
 				FD2D501B257AD21900A6811C /* TextFieldReturnNextResponderDelegate.swift in Sources */,
+				FD36F44A257EC5B300123FFB /* env.swift in Sources */,
+				FD36F43D257E74CB00123FFB /* LicenseView.swift in Sources */,
 				FDEE7AB92556B97000532653 /* EntryViewController.swift in Sources */,
+				FDFEA1B4258E5EC200EF3EA1 /* AutoclusteringAnnotationView.swift in Sources */,
 				FDEE7AB52556B97000532653 /* AppDelegate.swift in Sources */,
+				FD44A5C8258E113C004E3B2B /* AuthRetryButton.swift in Sources */,
+				FDF91A83257E740E00367314 /* TextView.swift in Sources */,
 				FDCF04D8257C31D000FEA48D /* CLGeocoder+Future.swift in Sources */,
 				FD2148B125606E560005AD0D /* SceneDelegate.swift in Sources */,
-				FD316D31256005D000872EFB /* AppDelegate+ViewLocking.swift in Sources */,
-				FDB3031725680AB000EED82F /* EmptyCollectionViewCell.swift in Sources */,
+				FD316D31256005D000872EFB /* LockingDelegate.swift in Sources */,
 				FD38B33D257BE87F0016311E /* WeatherAPI.swift in Sources */,
-				FDFC0237257B8695003A52EB /* LockedView.swift in Sources */,
 				FDE9713F2557080A002B911A /* MapViewController.swift in Sources */,
 				FD84AA8C25713EF100C046E4 /* EntryProvider.swift in Sources */,
 				FD316D2C255FF2CA00872EFB /* LocationManager.swift in Sources */,

@@ -45,7 +45,7 @@ class DailyTests: XCTestCase {
         let currentDate = Date()
 
         self.measure {
-            let _ = try? entryProvider.entries(where: { entry in
+            _ = try? entryProvider.entries(where: { entry in
                 calendar.isDate(entry.date, inSameDayAs: currentDate)
             }).first
         }
@@ -60,6 +60,20 @@ class DailyTests: XCTestCase {
             guard let range = calendar.range(of: .day, in: currentDate) else { assertionFailure("Failed to make date"); return }
             let _ = try? entryProvider.entries(inDateRange: range).first
         }
+    }
+
+    func testUpdatingLogic() throws {
+        let visibleOnTable = Set([0, 1, 2])
+        let visibleOnMap = Set([1, 2, 3])
+
+        // modifications
+        let remove = visibleOnTable.subtracting(visibleOnMap) // visible on table but not on map, remove
+        let add = visibleOnMap.subtracting(visibleOnTable) // visible on map but not table, add to table
+
+        print("Table: \(visibleOnTable)")
+        print("Map: \(visibleOnMap)")
+        print("Should remove \(remove)")
+        print("Should add \(add)")
     }
 
 }

@@ -17,7 +17,7 @@ class MockEntryProvider: EntryProvider {
     required init() {}
 
     // Fetching
-    private var storage: [Entry]? = nil
+    var storage: [Entry]? = nil
 
     func allEntries() -> [Entry] {
         if let storage = storage { return storage }
